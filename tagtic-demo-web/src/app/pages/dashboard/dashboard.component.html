@@ -1,0 +1,162 @@
+<div class="space-y-6">
+
+  <!-- Page header -->
+  <div class="flex items-center justify-between">
+    <div>
+      <h1 class="text-2xl font-bold text-gray-800 dark:text-white/90">Tableau de bord</h1>
+      <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Vue d'ensemble de l'activité d'annotation</p>
+    </div>
+    <span class="text-sm text-gray-400 dark:text-gray-500">Mis à jour aujourd'hui</span>
+  </div>
+
+  <!-- Metric cards -->
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4 md:gap-6">
+
+    <!-- Projets -->
+    <div class="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] md:p-6">
+      <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/20">
+        <svg class="size-6 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 6C2.25 4.757 3.257 3.75 4.5 3.75H9.086C9.484 3.75 9.865 3.908 10.146 4.189L11.311 5.354C11.401 5.444 11.524 5.495 11.651 5.5H19.5C20.743 5.5 21.75 6.507 21.75 7.75V18C21.75 19.243 20.743 20.25 19.5 20.25H4.5C3.257 20.25 2.25 19.243 2.25 18V6Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="mt-5">
+        <span class="text-sm text-gray-500 dark:text-gray-400">Projets</span>
+        <h4 class="mt-2 text-3xl font-bold text-gray-800 dark:text-white/90">12</h4>
+        <div class="flex items-center gap-2 mt-2">
+          <span class="inline-flex items-center gap-1 rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">
+            5 en cours
+          </span>
+          <span class="text-xs text-gray-400">· 7 terminés</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Annotations -->
+    <div class="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] md:p-6">
+      <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-green-50 dark:bg-green-900/20">
+        <svg class="size-6 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 7C5.895 7 5 7.895 5 9V19C5 20.105 5.895 21 7 21H17L23 15L17 9H7Z" fill="currentColor" fill-opacity="0.2"/>
+          <path d="M7 7C5.895 7 5 7.895 5 9V19C5 20.105 5.895 21 7 21H17L23 15L17 9H7Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <circle cx="8.5" cy="15" r="1.5" fill="currentColor"/>
+          <path d="M12 12L16 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M16 12L12 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="mt-5">
+        <span class="text-sm text-gray-500 dark:text-gray-400">Annotations</span>
+        <h4 class="mt-2 text-3xl font-bold text-gray-800 dark:text-white/90">2 847</h4>
+        <div class="flex items-center gap-2 mt-2">
+          <span class="inline-flex items-center gap-1 rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+            <svg class="size-3" fill="none" viewBox="0 0 12 12"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.063 1.624a.75.75 0 0 1 .562.249l3 3a.75.75 0 1 1-1.125.994L6.875 4.243V10.25a.75.75 0 0 1-1.5 0V4.243L3.75 5.867a.75.75 0 1 1-1.125-.993l3-3a.75.75 0 0 1 .438-.25z" fill="currentColor"/></svg>
+            +126 cette semaine
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Documents -->
+    <div class="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] md:p-6">
+      <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-900/20">
+        <svg class="size-6 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 3.25C4.257 3.25 3.25 4.257 3.25 5.5V18.5C3.25 19.743 4.257 20.75 5.5 20.75H18.5C19.743 20.75 20.75 19.743 20.75 18.5V5.5C20.75 4.257 19.743 3.25 18.5 3.25H5.5ZM7 8.75C7 8.336 7.336 8 7.75 8H16.25C16.664 8 17 8.336 17 8.75S16.664 9.5 16.25 9.5H7.75C7.336 9.5 7 9.164 7 8.75ZM7 12C7 11.586 7.336 11.25 7.75 11.25H16.25C16.664 11.25 17 11.586 17 12S16.664 12.75 16.25 12.75H7.75C7.336 12.75 7 12.414 7 12ZM7.75 14.5C7.336 14.5 7 14.836 7 15.25S7.336 16 7.75 16H12.25C12.664 16 13 15.664 13 15.25S12.664 14.5 12.25 14.5H7.75Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="mt-5">
+        <span class="text-sm text-gray-500 dark:text-gray-400">Documents annotés</span>
+        <h4 class="mt-2 text-3xl font-bold text-gray-800 dark:text-white/90">342</h4>
+        <div class="flex items-center gap-2 mt-2">
+          <span class="text-xs text-gray-400">sur 500 total</span>
+          <span class="inline-flex items-center gap-1 rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-700 dark:bg-purple-900/30 dark:text-purple-400">
+            68 %
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Taux de complétion -->
+    <div class="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] md:p-6">
+      <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-orange-50 dark:bg-orange-900/20">
+        <svg class="size-6 text-orange-500 dark:text-orange-400" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12S6.477 22 12 22 22 17.523 22 12 17.523 2 12 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M12 2C12 2 12 12 12 12L18.5 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="12" cy="12" r="2" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="mt-5">
+        <span class="text-sm text-gray-500 dark:text-gray-400">Taux de complétion</span>
+        <h4 class="mt-2 text-3xl font-bold text-gray-800 dark:text-white/90">68,4 %</h4>
+        <div class="flex items-center gap-2 mt-2">
+          <span class="inline-flex items-center gap-1 rounded-full bg-orange-100 px-2 py-0.5 text-xs font-medium text-orange-600 dark:bg-orange-900/30 dark:text-orange-400">
+            <svg class="size-3" fill="none" viewBox="0 0 12 12"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.063 1.624a.75.75 0 0 1 .562.249l3 3a.75.75 0 1 1-1.125.994L6.875 4.243V10.25a.75.75 0 0 1-1.5 0V4.243L3.75 5.867a.75.75 0 1 1-1.125-.993l3-3a.75.75 0 0 1 .438-.25z" fill="currentColor"/></svg>
+            +3,2 % ce mois
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Progress global -->
+  <div class="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] md:p-6">
+    <div class="flex items-center justify-between mb-3">
+      <h3 class="text-base font-semibold text-gray-800 dark:text-white/90">Progression globale du corpus</h3>
+      <span class="text-sm font-medium text-gray-800 dark:text-white/90">68 %</span>
+    </div>
+    <div class="h-3 w-full rounded-full bg-gray-100 dark:bg-gray-800">
+      <div class="h-3 rounded-full bg-brand-500" style="width: 68%"></div>
+    </div>
+    <div class="flex justify-between mt-2 text-xs text-gray-400">
+      <span>342 documents annotés</span>
+      <span>500 documents au total</span>
+    </div>
+  </div>
+
+  <!-- Recent projects table -->
+  <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
+    <div class="px-5 py-4 border-b border-gray-200 dark:border-gray-800">
+      <h3 class="text-base font-semibold text-gray-800 dark:text-white/90">Projets récents</h3>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-gray-200 dark:border-gray-800">
+            <th class="px-5 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">Projet</th>
+            <th class="px-5 py-3 text-right text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">Documents</th>
+            <th class="px-5 py-3 text-right text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">Annotations</th>
+            <th class="px-5 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400 min-w-[140px]">Progression</th>
+            <th class="px-5 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">Statut</th>
+            <th class="px-5 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (project of projects; track project.nom) {
+          <tr class="border-b border-gray-100 dark:border-gray-800 last:border-0 hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors">
+            <td class="px-5 py-4 font-medium text-gray-800 dark:text-white/90">{{ project.nom }}</td>
+            <td class="px-5 py-4 text-right text-gray-600 dark:text-gray-400">{{ project.documents }}</td>
+            <td class="px-5 py-4 text-right text-gray-600 dark:text-gray-400">{{ project.annotations | number }}</td>
+            <td class="px-5 py-4">
+              <div class="flex items-center gap-2">
+                <div class="flex-1 h-1.5 rounded-full bg-gray-100 dark:bg-gray-800">
+                  <div
+                    class="h-1.5 rounded-full transition-all"
+                    [ngClass]="progressionClass(project.progression)"
+                    [style.width.%]="project.progression"
+                  ></div>
+                </div>
+                <span class="text-xs text-gray-500 dark:text-gray-400 w-9 text-right">{{ project.progression }}&nbsp;%</span>
+              </div>
+            </td>
+            <td class="px-5 py-4">
+              <span class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium" [ngClass]="statutClass(project.statut)">
+                {{ project.statut }}
+              </span>
+            </td>
+            <td class="px-5 py-4 text-gray-500 dark:text-gray-400">{{ project.date }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
