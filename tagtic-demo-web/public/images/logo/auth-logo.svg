@@ -1,8 +1,0 @@
-<svg width="231" height="48" viewBox="0 0 231 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Icon (48x48) -->
-  <rect width="48" height="48" rx="12" fill="#465FFF"/>
-  <path d="M13.5 12C11.843 12 10.5 13.343 10.5 15V33C10.5 34.657 11.843 36 13.5 36H30L40.5 24L30 12H13.5Z" fill="white"/>
-  <circle cx="15.75" cy="24" r="3" fill="#465FFF"/>
-  <!-- Wordmark -->
-  <text x="62" y="33" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF" letter-spacing="2">TAGTIC</text>
-</svg>

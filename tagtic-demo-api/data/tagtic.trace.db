@@ -1,0 +1,85 @@
+2026-05-28 15:44:02.461247+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "\000a    create table annotation_field_value (\000a        auto_filled boolean,\000a        created_at timestamp(6) with time zone not null,\000a        annotation_id uuid not null,\000a        form_field_id uuid not null,\000a        id uuid not null,\000a        field_label varchar(255),\000a        field_name varchar(255),\000a        source_metadata_key varchar(255),\000a        [*]value varchar(255),\000a        field_type enum ('BOOLEAN','DATE','NUMBER','SELECT','TEXT'),\000a        primary key (id)\000a    )"; attendu "identifier"
+Syntax error in SQL statement "\000a    create table annotation_field_value (\000a        auto_filled boolean,\000a        created_at timestamp(6) with time zone not null,\000a        annotation_id uuid not null,\000a        form_field_id uuid not null,\000a        id uuid not null,\000a        field_label varchar(255),\000a        field_name varchar(255),\000a        source_metadata_key varchar(255),\000a        [*]value varchar(255),\000a        field_type enum ('BOOLEAN','DATE','NUMBER','SELECT','TEXT'),\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table annotation_field_value (
+        auto_filled boolean,
+        created_at timestamp(6) with time zone not null,
+        annotation_id uuid not null,
+        form_field_id uuid not null,
+        id uuid not null,
+        field_label varchar(255),
+        field_name varchar(255),
+        source_metadata_key varchar(255),
+        value varchar(255),
+        field_type enum ('BOOLEAN','DATE','NUMBER','SELECT','TEXT'),
+        primary key (id)
+    ) [42001-224]
+2026-05-28 15:45:35.037396+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "\000a    create table annotation_field_value (\000a        id uuid not null,\000a        annotation_id uuid not null,\000a        auto_filled boolean,\000a        created_at timestamp(6) with time zone not null,\000a        field_label varchar(255),\000a        field_name varchar(255),\000a        field_type enum ('BOOLEAN','DATE','NUMBER','SELECT','TEXT'),\000a        form_field_id uuid not null,\000a        source_metadata_key varchar(255),\000a        [*]value varchar(255),\000a        primary key (id)\000a    )"; attendu "identifier"
+Syntax error in SQL statement "\000a    create table annotation_field_value (\000a        id uuid not null,\000a        annotation_id uuid not null,\000a        auto_filled boolean,\000a        created_at timestamp(6) with time zone not null,\000a        field_label varchar(255),\000a        field_name varchar(255),\000a        field_type enum ('BOOLEAN','DATE','NUMBER','SELECT','TEXT'),\000a        form_field_id uuid not null,\000a        source_metadata_key varchar(255),\000a        [*]value varchar(255),\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table annotation_field_value (
+        id uuid not null,
+        annotation_id uuid not null,
+        auto_filled boolean,
+        created_at timestamp(6) with time zone not null,
+        field_label varchar(255),
+        field_name varchar(255),
+        field_type enum ('BOOLEAN','DATE','NUMBER','SELECT','TEXT'),
+        form_field_id uuid not null,
+        source_metadata_key varchar(255),
+        value varchar(255),
+        primary key (id)
+    ) [42001-224]
+2026-05-28 15:48:00.996443+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "\000a    create table annotation_field_value (\000a        id uuid not null,\000a        annotation_id uuid not null,\000a        auto_filled boolean,\000a        created_at timestamp(6) with time zone not null,\000a        field_label varchar(255),\000a        field_name varchar(255),\000a        field_type enum ('BOOLEAN','DATE','NUMBER','SELECT','TEXT'),\000a        form_field_id uuid not null,\000a        source_metadata_key varchar(255),\000a        [*]value varchar(255),\000a        primary key (id)\000a    )"; attendu "identifier"
+Syntax error in SQL statement "\000a    create table annotation_field_value (\000a        id uuid not null,\000a        annotation_id uuid not null,\000a        auto_filled boolean,\000a        created_at timestamp(6) with time zone not null,\000a        field_label varchar(255),\000a        field_name varchar(255),\000a        field_type enum ('BOOLEAN','DATE','NUMBER','SELECT','TEXT'),\000a        form_field_id uuid not null,\000a        source_metadata_key varchar(255),\000a        [*]value varchar(255),\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table annotation_field_value (
+        id uuid not null,
+        annotation_id uuid not null,
+        auto_filled boolean,
+        created_at timestamp(6) with time zone not null,
+        field_label varchar(255),
+        field_name varchar(255),
+        field_type enum ('BOOLEAN','DATE','NUMBER','SELECT','TEXT'),
+        form_field_id uuid not null,
+        source_metadata_key varchar(255),
+        value varchar(255),
+        primary key (id)
+    ) [42001-224]
+2026-05-28 15:48:10.796824+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "\000a    create table annotation_field_value (\000a        id uuid not null,\000a        annotation_id uuid not null,\000a        auto_filled boolean,\000a        created_at timestamp(6) with time zone not null,\000a        field_label varchar(255),\000a        field_name varchar(255),\000a        field_type enum ('BOOLEAN','DATE','NUMBER','SELECT','TEXT'),\000a        form_field_id uuid not null,\000a        source_metadata_key varchar(255),\000a        [*]value varchar(255),\000a        primary key (id)\000a    )"; attendu "identifier"
+Syntax error in SQL statement "\000a    create table annotation_field_value (\000a        id uuid not null,\000a        annotation_id uuid not null,\000a        auto_filled boolean,\000a        created_at timestamp(6) with time zone not null,\000a        field_label varchar(255),\000a        field_name varchar(255),\000a        field_type enum ('BOOLEAN','DATE','NUMBER','SELECT','TEXT'),\000a        form_field_id uuid not null,\000a        source_metadata_key varchar(255),\000a        [*]value varchar(255),\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table annotation_field_value (
+        id uuid not null,
+        annotation_id uuid not null,
+        auto_filled boolean,
+        created_at timestamp(6) with time zone not null,
+        field_label varchar(255),
+        field_name varchar(255),
+        field_type enum ('BOOLEAN','DATE','NUMBER','SELECT','TEXT'),
+        form_field_id uuid not null,
+        source_metadata_key varchar(255),
+        value varchar(255),
+        primary key (id)
+    ) [42001-224]
+2026-05-28 15:49:28.831985+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "\000a    create table annotation_field_value (\000a        id uuid not null,\000a        annotation_id uuid not null,\000a        auto_filled boolean,\000a        created_at timestamp(6) with time zone not null,\000a        field_label varchar(255),\000a        field_name varchar(255),\000a        field_type varchar(255),\000a        form_field_id uuid not null,\000a        source_metadata_key varchar(255),\000a        [*]value varchar(255),\000a        primary key (id)\000a    )"; attendu "identifier"
+Syntax error in SQL statement "\000a    create table annotation_field_value (\000a        id uuid not null,\000a        annotation_id uuid not null,\000a        auto_filled boolean,\000a        created_at timestamp(6) with time zone not null,\000a        field_label varchar(255),\000a        field_name varchar(255),\000a        field_type varchar(255),\000a        form_field_id uuid not null,\000a        source_metadata_key varchar(255),\000a        [*]value varchar(255),\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table annotation_field_value (
+        id uuid not null,
+        annotation_id uuid not null,
+        auto_filled boolean,
+        created_at timestamp(6) with time zone not null,
+        field_label varchar(255),
+        field_name varchar(255),
+        field_type varchar(255),
+        form_field_id uuid not null,
+        source_metadata_key varchar(255),
+        value varchar(255),
+        primary key (id)
+    ) [42001-224]
