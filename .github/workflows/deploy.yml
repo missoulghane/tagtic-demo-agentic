@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main 
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -36,3 +37,29 @@ jobs:
           file: ./tagtic-demo-web/Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/tagtic-web:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-and-push # Attend que le build des deux images soit fini
+
+    steps:
+      - name: Déploiement SSH sur l'EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            # 1. Allez dans le dossier de votre projet sur l'EC2
+            # ⚠️ REMPLACEZ la ligne ci-dessous par le vrai chemin de votre projet sur votre EC2
+            cd /home/ubuntu/tagtic-demo-agentic/
+
+            # 2. Récupérer le docker-compose.yml mis à jour à l'étape 1
+            git pull
+
+            # 3. Se connecter à GHCR depuis l'EC2 pour avoir le droit de télécharger les images
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+            # 4. Télécharger les nouvelles images et relancer les conteneurs sans build local
+            docker compose pull
+            docker compose up -d --remove-orphans
