@@ -52,7 +52,7 @@ jobs:
           script: |
             # 1. Allez dans le dossier de votre projet sur l'EC2
             # ⚠️ REMPLACEZ la ligne ci-dessous par le vrai chemin de votre projet sur votre EC2
-            cd /home/ubuntu/tagtic-demo-agentic/
+            cd /home/ubuntu/tagtic-demo-agentic
 
             # 2. Récupérer le docker-compose.yml mis à jour à l'étape 1
             git pull
