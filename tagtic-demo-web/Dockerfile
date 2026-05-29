@@ -1,13 +1,16 @@
-FROM node:20 AS build
+FROM node:20-alpine AS build
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+
+# Installation plus légère et plus rapide
+RUN npm ci --no-audit --no-fund
 
 COPY . .
 
-RUN npm run build -- --configuration production
+# Build Angular moins gourmand
+RUN npm run build
 
 FROM nginx:alpine
 

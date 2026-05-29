@@ -20,3 +20,7 @@ else
 fi
 
 echo "✅ Docker cleanup finished!"
+
+docker compose up -d --build
+
+echo "✅ Install finished!"
