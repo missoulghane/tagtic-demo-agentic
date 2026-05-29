@@ -6,6 +6,8 @@ services:
     ports:
       - "8080:8080"
     restart: always
+    env_file:
+      - ./tagtic-demo-api/.env
     environment:
       - SPRING_PROFILES_ACTIVE=prod
 
