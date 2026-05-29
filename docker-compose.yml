@@ -1,26 +1,20 @@
-version: "3.9"
-
 services:
-
   backend:
-    container_name: tagtic-api
     build:
       context: ./tagtic-demo-api
+    container_name: tagtic-api
     ports:
       - "8080:8080"
-    networks:
-      - tagtic-net
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
 
   frontend:
-    container_name: tagtic-web
     build:
       context: ./tagtic-demo-web
+    container_name: tagtic-web
     ports:
-      - "4200:80"
+      - "80:80"
+    restart: always
     depends_on:
       - backend
-    networks:
-      - tagtic-net
-
-networks:
-  tagtic-net:

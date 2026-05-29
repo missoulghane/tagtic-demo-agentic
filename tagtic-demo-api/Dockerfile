@@ -1,8 +1,16 @@
+FROM maven:3.9-eclipse-temurin-21 AS build
+
+WORKDIR /app
+
+COPY . .
+
+RUN mvn clean package -DskipTests
+
 FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 
-COPY target/*.jar tagtic.jar
+COPY --from=build /app/target/*.jar tagtic.jar
 
 EXPOSE 8080
 
