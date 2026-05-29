@@ -3,7 +3,7 @@ name: CI/CD Tagtic
 on:
   push:
     branches:
-      - main 
+      - main # ⚠️ Ajuste par 'master' si nécessaire
 
 jobs:
   build-and-push:
@@ -22,13 +22,20 @@ jobs:
       - name: Configurer Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      # Mettre le nom d'utilisateur en minuscules
+      - name: Passer le nom d'utilisateur en minuscules
+        run: |
+          echo "OWNER_LC=${OWNER,,}" >> ${GITHUB_ENV}
+        env:
+          OWNER: ${{ github.repository_owner }}
+
       - name: Build & Push Backend
         uses: docker/build-push-action@v5
         with:
           context: ./tagtic-demo-api
           file: ./tagtic-demo-api/Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/tagtic-api:latest
+          tags: ghcr.io/${{ env.OWNER_LC }}/tagtic-api:latest # 👈 Utilise la variable en minuscules
 
       - name: Build & Push Frontend
         uses: docker/build-push-action@v5
@@ -36,11 +43,11 @@ jobs:
           context: ./tagtic-demo-web
           file: ./tagtic-demo-web/Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/tagtic-web:latest
+          tags: ghcr.io/${{ env.OWNER_LC }}/tagtic-web:latest # 👈 Utilise la variable en minuscules
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build-and-push # Attend que le build des deux images soit fini
+    needs: build-and-push
 
     steps:
       - name: Déploiement SSH sur l'EC2
@@ -50,16 +57,11 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            # 1. Allez dans le dossier de votre projet sur l'EC2
-            # ⚠️ REMPLACEZ la ligne ci-dessous par le vrai chemin de votre projet sur votre EC2
             cd /home/ubuntu/tagtic-demo-agentic
-
-            # 2. Récupérer le docker-compose.yml mis à jour à l'étape 1
             git pull
-
-            # 3. Se connecter à GHCR depuis l'EC2 pour avoir le droit de télécharger les images
+            
+            # Utilisation du nom en minuscules pour le login sur l'EC2 également
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-
-            # 4. Télécharger les nouvelles images et relancer les conteneurs sans build local
+            
             docker compose pull
             docker compose up -d --remove-orphans
