@@ -1,7 +1,7 @@
 services:
   backend:
-    build:
-      context: ./tagtic-demo-api
+    # On pointe vers le registre GitHub
+    image: ghcr.io/votre-nom-github/tagtic-api:latest
     container_name: tagtic-api
     ports:
       - "8080:8080"
@@ -12,8 +12,8 @@ services:
       - SPRING_PROFILES_ACTIVE=prod
 
   frontend:
-    build:
-      context: ./tagtic-demo-web
+    # Idem pour le frontend
+    image: ghcr.io/votre-nom-github/tagtic-web:latest
     container_name: tagtic-web
     ports:
       - "80:80"
