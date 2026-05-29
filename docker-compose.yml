@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+
+  backend:
+    container_name: tagtic-api
+    build:
+      context: ./tagtic-demo-api
+    ports:
+      - "8080:8080"
+    networks:
+      - tagtic-net
+
+  frontend:
+    container_name: tagtic-web
+    build:
+      context: ./tagtic-demo-web
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    networks:
+      - tagtic-net
+
+networks:
+  tagtic-net:

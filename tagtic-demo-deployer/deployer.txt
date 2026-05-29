@@ -1,0 +1,24 @@
+
+# Utils
+cd /Users/morad/github/ocrf/tagtic-demo-agentic/tagtic-demo-deployer
+chmod 400 ./tagtic-demo-server.pem
+ssh -i "tagtic-demo-server.pem" ubuntu@ec2-15-188-10-93.eu-west-3.compute.amazonaws.com
+
+
+# EC2 first config 
+sudo apt update && sudo apt upgrade -y
+sudo reboot
+ssh -i "tagtic-demo-server.pem" ubuntu@ec2-15-188-10-93.eu-west-3.compute.amazonaws.com
+curl -fsSL https://get.docker.com | sudo sh
+sudo usermod -aG docker $USER
+sudo reboot
+ssh -i "tagtic-demo-server.pem" ubuntu@ec2-15-188-10-93.eu-west-3.compute.amazonaws.com
+
+
+# Springboot Docker (Commande sur la solution springboot)
+./mvnw clean package
+docker build -t spring-backend .
+
+# Angular Docker (Commande sur la solution springboot)
+ng build
+docker build -t angular-frontend .
